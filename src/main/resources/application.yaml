@@ -1,0 +1,11 @@
+spring:
+  kafka:
+    bootstrap-servers: 'localhost:9092,localhost:9093,localhost:9094'
+    client-id: referrals-local
+    producer:
+      value-serializer: io.cloudevents.kafka.CloudEventSerializer
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+  jackson:
+    property-naming-strategy: SNAKE_CASE
+server:
+  port: 8086
